@@ -9,12 +9,11 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate, UISearchBarDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate {
     
     var todoItems:Results<Todo>!
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var todoCount: UILabel!
-    @IBOutlet weak var searchBar: UISearchBar!
     
     //検索結果が入る配列
     var searchResult: Array<String> = []
@@ -25,7 +24,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         super.viewDidLoad()
         
         table.dataSource = self
-        searchBar.delegate = self
         
         let realm = try! Realm()
         todoItems = realm.objects(Todo.self)
@@ -73,47 +71,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-    
-    //MARK: - 渡された文字列を含む要素を検索し、テーブルビューを再表示する
-    func searchItems(searchText: String) {
-        //要素を検索する
-        if searchText != "" {
-            searchResult = items.filter { item in
-                return item.contains(searchText)
-            } as Array
-        } else {
-            //渡された文字列が空の場合は全てを表示
-            searchResult = items
-        }
-        print(searchText)
-        print(searchResult)
-        print("aaa")
-        //tableViewを再読み込みする
-        table.reloadData()
-    }
-    
-    // MARK: - Search Bar Delegate Methods
-    // テキストが変更される毎に呼ばれる
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        //検索する
-        searchItems(searchText: searchText)
-    }
-    
-    // キャンセルボタンが押されると呼ばれる
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
-        view.endEditing(true)
-        searchResult = items
-        //tableViewを再読み込みする
-        table.reloadData()
-    }
-
-    // Searchボタンが押されると呼ばれる
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        view.endEditing(true)
-        //検索する
-        searchItems(searchText: searchBar.text! as String)
     }
 
 }

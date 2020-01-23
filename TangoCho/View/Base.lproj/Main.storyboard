@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gH8-rj-Oae">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gH8-rj-Oae">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c9x-G0-g9i">
-                                <rect key="frame" x="0.0" y="137" width="375" height="587"/>
+                                <rect key="frame" x="0.0" y="81" width="375" height="663"/>
                                 <color key="backgroundColor" red="0.74997992479999998" green="0.7093159913" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.36520162217037333" green="0.37573054532294237" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.74997992479999998" green="0.7093159913" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,26 +69,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="6Yq-fm-Wv2">
-                                <rect key="frame" x="0.0" y="81" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.74997992481660181" green="0.70931599128515632" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="c9x-G0-g9i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3WL-AK-F7B"/>
                             <constraint firstItem="J7h-8C-Hc7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="6cS-vJ-wqi"/>
-                            <constraint firstItem="6Yq-fm-Wv2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8kr-IV-4cT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J7h-8C-Hc7" secondAttribute="trailing" constant="16" id="Aj9-3A-ZHe"/>
-                            <constraint firstAttribute="bottom" secondItem="c9x-G0-g9i" secondAttribute="bottom" id="Ds9-mN-3mY"/>
+                            <constraint firstItem="c9x-G0-g9i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PZ8-8P-fTY"/>
                             <constraint firstItem="CQa-Cy-0Q0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qcp-4d-GoP"/>
-                            <constraint firstItem="6Yq-fm-Wv2" firstAttribute="top" secondItem="Om3-ZY-rvF" secondAttribute="bottom" constant="10" id="Qmi-dg-7KP"/>
-                            <constraint firstItem="c9x-G0-g9i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jDX-ja-dqu"/>
+                            <constraint firstItem="c9x-G0-g9i" firstAttribute="top" secondItem="Om3-ZY-rvF" secondAttribute="bottom" constant="10" id="Qks-rY-sMc"/>
+                            <constraint firstItem="c9x-G0-g9i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lGF-Jj-yXi"/>
                             <constraint firstItem="CQa-Cy-0Q0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mMG-mN-NNS"/>
                             <constraint firstItem="Om3-ZY-rvF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="mta-vH-oBJ"/>
-                            <constraint firstItem="6Yq-fm-Wv2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nzL-F0-j5Q"/>
                             <constraint firstItem="J7h-8C-Hc7" firstAttribute="leading" secondItem="Om3-ZY-rvF" secondAttribute="trailing" constant="16" id="trA-0O-COS"/>
-                            <constraint firstItem="c9x-G0-g9i" firstAttribute="top" secondItem="6Yq-fm-Wv2" secondAttribute="bottom" symbolic="YES" id="w8j-fF-HiJ"/>
+                            <constraint firstAttribute="bottom" secondItem="c9x-G0-g9i" secondAttribute="bottom" constant="-20" id="uT8-7P-Ady"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -100,7 +93,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchBar" destination="6Yq-fm-Wv2" id="8pY-N2-neJ"/>
                         <outlet property="table" destination="c9x-G0-g9i" id="1oF-b5-wma"/>
                         <outlet property="todoCount" destination="Om3-ZY-rvF" id="58q-EK-YTo"/>
                     </connections>
