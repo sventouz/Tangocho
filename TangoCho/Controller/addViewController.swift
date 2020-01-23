@@ -14,6 +14,7 @@ class addViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var textMeaningBox: UITextField!
     @IBOutlet weak var error: UILabel!
+    @IBOutlet weak var typeField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class addViewController: UIViewController, UITextFieldDelegate {
         if textBox.text! != "" && textMeaningBox.text! != "" {
             todo.title = textBox.text!
             todo.meaning = textMeaningBox.text!
+            todo.type = typeField.text!
             try! realm.write {
                 realm.add(todo)
             }

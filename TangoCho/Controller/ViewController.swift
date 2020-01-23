@@ -28,6 +28,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         let realm = try! Realm()
         todoItems = realm.objects(Todo.self)
         
+        table.register (UINib(nibName: "CustomCell", bundle: nil),forCellReuseIdentifier:"reusableCell")
+        
         //テーブルセルの左の余白を消す
         table.separatorInset = UIEdgeInsets.zero
         
@@ -46,12 +48,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reusableCell", for: indexPath) as! CustomCell
         let object = todoItems[indexPath.row]
-        cell.textLabel?.text = object.title
-        cell.detailTextLabel?.text = object.meaning
+        cell.wordLabel.text = object.title
+        cell.meaningLabel.text = object.meaning
+        cell.typeLabel.text = object.type
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+         return 100
+     }
     
     //削除機能
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
