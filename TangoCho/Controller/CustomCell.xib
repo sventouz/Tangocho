@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,15 +37,16 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="WqH-4m-ri7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8Ul-1m-Him"/>
+                    <constraint firstItem="WqH-4m-ri7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7K5-aj-opF"/>
                     <constraint firstAttribute="bottom" secondItem="gwo-hb-bex" secondAttribute="bottom" constant="10" id="Bh4-DN-zGI"/>
                     <constraint firstItem="gwo-hb-bex" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="F2o-s6-0ZF"/>
+                    <constraint firstAttribute="trailing" secondItem="WqH-4m-ri7" secondAttribute="trailing" constant="15" id="G08-wK-AMQ"/>
                     <constraint firstItem="gwo-hb-bex" firstAttribute="top" secondItem="QsO-k5-0BO" secondAttribute="bottom" constant="30" id="Qih-jB-3SZ"/>
                     <constraint firstItem="QsO-k5-0BO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Tjt-N3-SH1"/>
+                    <constraint firstItem="WqH-4m-ri7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WWr-tb-PB8"/>
                     <constraint firstAttribute="bottom" secondItem="gwo-hb-bex" secondAttribute="bottom" constant="10" id="aOT-Nl-eVc"/>
                     <constraint firstItem="gwo-hb-bex" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="aU7-r0-guZ"/>
                     <constraint firstItem="QsO-k5-0BO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="gxq-Ae-Bny"/>
-                    <constraint firstAttribute="trailing" secondItem="WqH-4m-ri7" secondAttribute="trailing" constant="15" id="wkb-Cp-ZwT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -54,7 +55,7 @@
                 <outlet property="typeLabel" destination="WqH-4m-ri7" id="i2S-Fh-LbF"/>
                 <outlet property="wordLabel" destination="QsO-k5-0BO" id="ZJe-Lc-cst"/>
             </connections>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="138.40579710144928" y="152.67857142857142"/>
         </tableViewCell>
     </objects>
 </document>

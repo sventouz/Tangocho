@@ -15,11 +15,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var todoCount: UILabel!
     
-    //検索結果が入る配列
-    var searchResult: Array<String> = []
-    //検索用のタイトルのみの配列
-    var items: Array<String> = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

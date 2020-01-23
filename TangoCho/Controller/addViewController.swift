@@ -19,6 +19,8 @@ class addViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textBox.delegate = self
+        textMeaningBox.delegate = self
+        typeField.delegate = self
         error.text = ""
     }
     
@@ -42,6 +44,8 @@ class addViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.textBox.resignFirstResponder()
+        self.textMeaningBox.resignFirstResponder()
+        self.typeField.resignFirstResponder()
         return true
     }
     
