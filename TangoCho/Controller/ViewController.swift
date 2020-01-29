@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     var todoItems:Results<Todo>!
     @IBOutlet weak var table: UITableView!
@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         super.viewDidLoad()
         
         table.dataSource = self
+        table.delegate = self
         
         let realm = try! Realm()
         todoItems = realm.objects(Todo.self)
@@ -54,6 +55,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
          return 100
      }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       tableView.deselectRow(at: indexPath, animated: true)
+       performSegue(withIdentifier: "toNextViewController", sender: indexPath)
+    }
     
     //削除機能
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

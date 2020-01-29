@@ -13,4 +13,6 @@ class Todo: Object {
     @objc dynamic var title = ""
     @objc dynamic var meaning = ""
     @objc dynamic var type = ""
+    @objc dynamic var example = ""
+    @objc dynamic var like = false
 }

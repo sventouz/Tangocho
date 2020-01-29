@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42B713A423E1BCF8000E96E7 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B713A323E1BCF8000E96E7 /* NextViewController.swift */; };
 		42FB5CD223C82E6C0073089A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FB5CD123C82E6C0073089A /* AppDelegate.swift */; };
 		42FB5CD423C82E6C0073089A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FB5CD323C82E6C0073089A /* ViewController.swift */; };
 		42FB5CD723C82E6C0073089A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FB5CD523C82E6C0073089A /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		2E23CB16F1DB724514A26C88 /* Pods-TangoCho.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TangoCho.debug.xcconfig"; path = "Target Support Files/Pods-TangoCho/Pods-TangoCho.debug.xcconfig"; sourceTree = "<group>"; };
 		37048437DF464C168DF04D02 /* Pods_TangoCho.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TangoCho.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B713A323E1BCF8000E96E7 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		42FB5CCE23C82E6C0073089A /* TangoCho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TangoCho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FB5CD123C82E6C0073089A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42FB5CD323C82E6C0073089A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				69306F1123D97918009E50C4 /* CustomCell.swift */,
 				69306F1223D97918009E50C4 /* CustomCell.xib */,
 				42FB5D0823C83A8F0073089A /* addViewController.swift */,
+				42B713A323E1BCF8000E96E7 /* NextViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FB5CD423C82E6C0073089A /* ViewController.swift in Sources */,
+				42B713A423E1BCF8000E96E7 /* NextViewController.swift in Sources */,
 				42FB5D0923C83A8F0073089A /* addViewController.swift in Sources */,
 				69306F1323D97918009E50C4 /* CustomCell.swift in Sources */,
 				42FB5CD223C82E6C0073089A /* AppDelegate.swift in Sources */,

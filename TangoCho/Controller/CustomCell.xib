@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="noun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqH-4m-ri7">
-                        <rect key="frame" x="321" y="29.5" width="39" height="21"/>
+                        <rect key="frame" x="200" y="29.5" width="39" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,22 +35,31 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="♡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIf-ez-8DD">
+                        <rect key="frame" x="279" y="29.5" width="16" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="WqH-4m-ri7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7K5-aj-opF"/>
                     <constraint firstAttribute="bottom" secondItem="gwo-hb-bex" secondAttribute="bottom" constant="10" id="Bh4-DN-zGI"/>
+                    <constraint firstItem="JIf-ez-8DD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="EUG-h3-H2F"/>
                     <constraint firstItem="gwo-hb-bex" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="F2o-s6-0ZF"/>
-                    <constraint firstAttribute="trailing" secondItem="WqH-4m-ri7" secondAttribute="trailing" constant="15" id="G08-wK-AMQ"/>
+                    <constraint firstItem="WqH-4m-ri7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="IYA-xr-OUY"/>
                     <constraint firstItem="gwo-hb-bex" firstAttribute="top" secondItem="QsO-k5-0BO" secondAttribute="bottom" constant="30" id="Qih-jB-3SZ"/>
                     <constraint firstItem="QsO-k5-0BO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Tjt-N3-SH1"/>
-                    <constraint firstItem="WqH-4m-ri7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WWr-tb-PB8"/>
+                    <constraint firstAttribute="trailing" secondItem="JIf-ez-8DD" secondAttribute="trailing" constant="80" id="U2x-Ku-kbc"/>
+                    <constraint firstItem="JIf-ez-8DD" firstAttribute="leading" secondItem="WqH-4m-ri7" secondAttribute="trailing" constant="40" id="XUX-9N-Iqw"/>
                     <constraint firstAttribute="bottom" secondItem="gwo-hb-bex" secondAttribute="bottom" constant="10" id="aOT-Nl-eVc"/>
                     <constraint firstItem="gwo-hb-bex" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="aU7-r0-guZ"/>
+                    <constraint firstItem="JIf-ez-8DD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gEv-VD-wmv"/>
                     <constraint firstItem="QsO-k5-0BO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="gxq-Ae-Bny"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="likeLabel" destination="JIf-ez-8DD" id="eTK-3E-VY3"/>
                 <outlet property="meaningLabel" destination="gwo-hb-bex" id="qdp-52-eF5"/>
                 <outlet property="typeLabel" destination="WqH-4m-ri7" id="i2S-Fh-LbF"/>
                 <outlet property="wordLabel" destination="QsO-k5-0BO" id="ZJe-Lc-cst"/>
