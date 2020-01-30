@@ -19,17 +19,31 @@ class NextViewController: UIViewController {
     @IBOutlet weak var likeLabel: UIButton!
     @IBOutlet weak var exampleLabel: UILabel!
     
+    var likeLabelTo: Bool?
+    
+    var word = String()
+    var meaning = String()
+    var type = String()
+    var example = String()
+    var like = Bool()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let realm = try! Realm()
         todoItems = realm.objects(Todo.self)
         
-//        let object = todoItems[indexPath.row]
-//        wordLabel.text = object.title
-//        meaningLabel.text = object.meaning
-//        typeLabel.text = object.type
-//        exampleLabel.text = object.type
+        wordLabel.text = word
+        meaningLabel.text = meaning
+        typeLabel.text = type
+        exampleLabel.text = example
+        likeLabelTo = like
+    }
+    
+    if likeLabelTo == false {
+       likeLabelTo = true
+    } else {
+        likeLabelTo = false
     }
 
 }

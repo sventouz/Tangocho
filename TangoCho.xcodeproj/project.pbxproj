@@ -17,12 +17,10 @@
 		42FB5D0B23C83AC20073089A /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FB5D0A23C83AC20073089A /* Todo.swift */; };
 		69306F1323D97918009E50C4 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69306F1123D97918009E50C4 /* CustomCell.swift */; };
 		69306F1423D97918009E50C4 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69306F1223D97918009E50C4 /* CustomCell.xib */; };
-		D7BD7AFF6718C63FEEB00F3B /* Pods_TangoCho.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37048437DF464C168DF04D02 /* Pods_TangoCho.framework */; };
+		837FD3548B5318117A177E0D /* Pods_TangoCho.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ADFC1D8CB22C2081D6DC2E9 /* Pods_TangoCho.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E23CB16F1DB724514A26C88 /* Pods-TangoCho.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TangoCho.debug.xcconfig"; path = "Target Support Files/Pods-TangoCho/Pods-TangoCho.debug.xcconfig"; sourceTree = "<group>"; };
-		37048437DF464C168DF04D02 /* Pods_TangoCho.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TangoCho.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B713A323E1BCF8000E96E7 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		42FB5CCE23C82E6C0073089A /* TangoCho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TangoCho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FB5CD123C82E6C0073089A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,9 +31,11 @@
 		42FB5CDD23C82E6E0073089A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42FB5D0823C83A8F0073089A /* addViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addViewController.swift; sourceTree = "<group>"; };
 		42FB5D0A23C83AC20073089A /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		5ADFC1D8CB22C2081D6DC2E9 /* Pods_TangoCho.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TangoCho.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61231988755A3D440B25FE87 /* Pods-TangoCho.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TangoCho.release.xcconfig"; path = "Target Support Files/Pods-TangoCho/Pods-TangoCho.release.xcconfig"; sourceTree = "<group>"; };
 		69306F1123D97918009E50C4 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		69306F1223D97918009E50C4 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
-		B394A0BFFC73B885DB2D984B /* Pods-TangoCho.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TangoCho.release.xcconfig"; path = "Target Support Files/Pods-TangoCho/Pods-TangoCho.release.xcconfig"; sourceTree = "<group>"; };
+		997CA279E1ECC89EC772A3CC /* Pods-TangoCho.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TangoCho.debug.xcconfig"; path = "Target Support Files/Pods-TangoCho/Pods-TangoCho.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7BD7AFF6718C63FEEB00F3B /* Pods_TangoCho.framework in Frameworks */,
+				837FD3548B5318117A177E0D /* Pods_TangoCho.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,7 @@
 				42FB5CD023C82E6C0073089A /* TangoCho */,
 				42FB5CCF23C82E6C0073089A /* Products */,
 				463A8E1DC97CE4880F663111 /* Pods */,
-				CBAB869933853E744733736B /* Frameworks */,
+				C509D191136D6BF2BF018CC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,16 +113,16 @@
 		463A8E1DC97CE4880F663111 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2E23CB16F1DB724514A26C88 /* Pods-TangoCho.debug.xcconfig */,
-				B394A0BFFC73B885DB2D984B /* Pods-TangoCho.release.xcconfig */,
+				997CA279E1ECC89EC772A3CC /* Pods-TangoCho.debug.xcconfig */,
+				61231988755A3D440B25FE87 /* Pods-TangoCho.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		CBAB869933853E744733736B /* Frameworks */ = {
+		C509D191136D6BF2BF018CC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				37048437DF464C168DF04D02 /* Pods_TangoCho.framework */,
+				5ADFC1D8CB22C2081D6DC2E9 /* Pods_TangoCho.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,11 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42FB5CE023C82E6E0073089A /* Build configuration list for PBXNativeTarget "TangoCho" */;
 			buildPhases = (
-				A5B9018D068ED6658383B584 /* [CP] Check Pods Manifest.lock */,
+				482E6A69DDA6D72F4C93AB7B /* [CP] Check Pods Manifest.lock */,
 				42FB5CCA23C82E6C0073089A /* Sources */,
 				42FB5CCB23C82E6C0073089A /* Frameworks */,
 				42FB5CCC23C82E6C0073089A /* Resources */,
-				9F5272A364A37438DFF31EAC /* [CP] Embed Pods Frameworks */,
+				4B1011DD8A75D0261F92DDED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,24 +197,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9F5272A364A37438DFF31EAC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TangoCho/Pods-TangoCho-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TangoCho/Pods-TangoCho-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TangoCho/Pods-TangoCho-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5B9018D068ED6658383B584 /* [CP] Check Pods Manifest.lock */ = {
+		482E6A69DDA6D72F4C93AB7B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -234,6 +217,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B1011DD8A75D0261F92DDED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TangoCho/Pods-TangoCho-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TangoCho/Pods-TangoCho-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TangoCho/Pods-TangoCho-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -392,7 +392,7 @@
 		};
 		42FB5CE123C82E6E0073089A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E23CB16F1DB724514A26C88 /* Pods-TangoCho.debug.xcconfig */;
+			baseConfigurationReference = 997CA279E1ECC89EC772A3CC /* Pods-TangoCho.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -411,7 +411,7 @@
 		};
 		42FB5CE223C82E6E0073089A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B394A0BFFC73B885DB2D984B /* Pods-TangoCho.release.xcconfig */;
+			baseConfigurationReference = 61231988755A3D440B25FE87 /* Pods-TangoCho.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -15,6 +15,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var todoCount: UILabel!
     
+    var word = ""
+    var meaning = ""
+    var type = ""
+    var example = ""
+    var like = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +37,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         todoCount.text = String(todoItems.count)
         table.reloadData()
+        print(todoItems)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,8 +64,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
      }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       tableView.deselectRow(at: indexPath, animated: true)
-       performSegue(withIdentifier: "toNextViewController", sender: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        let object = todoItems[indexPath.row]
+        word = object.title
+        meaning = object.meaning
+        type = object.type
+        example = object.example
+        like = object.like
+        performSegue(withIdentifier: "toNextViewController", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "toNextViewController") {
+            let nextVC: NextViewController = (segue.destination as? NextViewController)!
+            nextVC.word = word
+            nextVC.meaning = meaning
+            nextVC.type = type
+            nextVC.example = example
+            nextVC.like = like
+        }
     }
     
     //削除機能

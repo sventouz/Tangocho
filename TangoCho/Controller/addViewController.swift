@@ -34,7 +34,7 @@ class addViewController: UIViewController, UITextFieldDelegate {
             todo.title = textBox.text!
             todo.meaning = textMeaningBox.text!
             todo.type = typeField.text!
-            todo.example = typeField.text!
+            todo.example = exampleField.text!
             todo.like = false
             try! realm.write {
                 realm.add(todo)
