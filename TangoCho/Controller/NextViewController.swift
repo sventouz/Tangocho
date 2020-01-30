@@ -30,20 +30,38 @@ class NextViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let realm = try! Realm()
-        todoItems = realm.objects(Todo.self)
-        
         wordLabel.text = word
         meaningLabel.text = meaning
         typeLabel.text = type
         exampleLabel.text = example
         likeLabelTo = like
+        
+//        if likeLabelTo == true {
+//            likeLabel.setTitleColor(UIColor.red, for: .normal)
+//        } else {
+//            likeLabel.setTitleColor(UIColor.black, for: .normal)
+//        }
     }
     
-    if likeLabelTo == false {
-       likeLabelTo = true
-    } else {
-        likeLabelTo = false
-    }
+//    @IBAction func tapLike(_ sender: Any) {
+//        let realm = try! Realm()
+//        let todo = Todo()
+//
+//        if likeLabelTo == false {
+//           likeLabelTo = true
+//            likeLabel.setTitleColor(UIColor.red, for: .normal)
+//            try! realm.write {
+//                todo.like = true
+//            }
+//        } else {
+//            likeLabelTo = false
+//            likeLabel.setTitleColor(UIColor.black, for: .normal)
+//            try! realm.write {
+//                todo.like = false
+//            }
+//        }
+//        print(todo.like)
+//    }
+    
 
 }
