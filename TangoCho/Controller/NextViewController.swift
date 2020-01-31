@@ -21,47 +21,48 @@ class NextViewController: UIViewController {
     
     var likeLabelTo: Bool?
     
-    var word = String()
-    var meaning = String()
-    var type = String()
-    var example = String()
-    var like = Bool()
+    var num = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        wordLabel.text = word
-        meaningLabel.text = meaning
-        typeLabel.text = type
-        exampleLabel.text = example
-        likeLabelTo = like
+        let realm = try! Realm()
+        todoItems = realm.objects(Todo.self)
         
-//        if likeLabelTo == true {
-//            likeLabel.setTitleColor(UIColor.red, for: .normal)
-//        } else {
-//            likeLabel.setTitleColor(UIColor.black, for: .normal)
-//        }
+        let object = todoItems[num]
+        
+        wordLabel.text = object.title
+        meaningLabel.text = object.meaning
+        typeLabel.text = object.type
+        exampleLabel.text = object.example
+        likeLabelTo = object.like
+        
+        if likeLabelTo == true {
+            likeLabel.setTitleColor(UIColor.red, for: .normal)
+        } else {
+            likeLabel.setTitleColor(UIColor.black, for: .normal)
+        }
     }
     
-//    @IBAction func tapLike(_ sender: Any) {
-//        let realm = try! Realm()
-//        let todo = Todo()
-//
-//        if likeLabelTo == false {
-//           likeLabelTo = true
-//            likeLabel.setTitleColor(UIColor.red, for: .normal)
-//            try! realm.write {
-//                todo.like = true
-//            }
-//        } else {
-//            likeLabelTo = false
-//            likeLabel.setTitleColor(UIColor.black, for: .normal)
-//            try! realm.write {
-//                todo.like = false
-//            }
-//        }
-//        print(todo.like)
-//    }
+    @IBAction func tapLike(_ sender: Any) {
+        let realm = try! Realm()
+        todoItems = realm.objects(Todo.self)
+        let object = todoItems[num]
+
+        if likeLabelTo == false {
+           likeLabelTo = true
+            likeLabel.setTitleColor(UIColor.red, for: .normal)
+            try! realm.write {
+                object.like = true
+            }
+        } else {
+            likeLabelTo = false
+            likeLabel.setTitleColor(UIColor.black, for: .normal)
+            try! realm.write {
+                object.like = false
+            }
+        }
+    }
     
 
 }

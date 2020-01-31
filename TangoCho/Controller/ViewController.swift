@@ -15,11 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var todoCount: UILabel!
     
-    var word = ""
-    var meaning = ""
-    var type = ""
-    var example = ""
-    var like = false
+    var indexNum = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +31,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //テーブルセルの左の余白を消す
         table.separatorInset = UIEdgeInsets.zero
         
+        UITableView.appearance().tintColor = UIColor.gray
+        
         todoCount.text = String(todoItems.count)
         table.reloadData()
-        print(todoItems)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,6 +53,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.wordLabel.text = object.title
         cell.meaningLabel.text = object.meaning
         cell.typeLabel.text = object.type
+        if object.like == true {
+            cell.likeLabel.textColor = UIColor.red
+        } else {
+            cell.likeLabel.textColor = UIColor.black
+        }
         return cell
     }
     
@@ -65,22 +67,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let object = todoItems[indexPath.row]
-        word = object.title
-        meaning = object.meaning
-        type = object.type
-        example = object.example
-        like = object.like
+        indexNum = indexPath.row
         performSegue(withIdentifier: "toNextViewController", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "toNextViewController") {
             let nextVC: NextViewController = (segue.destination as? NextViewController)!
-            nextVC.word = word
-            nextVC.meaning = meaning
-            nextVC.type = type
-            nextVC.example = example
-            nextVC.like = like
+            nextVC.num = indexNum
         }
     }
     

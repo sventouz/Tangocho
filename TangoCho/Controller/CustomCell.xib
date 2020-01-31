@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,7 +38,13 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="♡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIf-ez-8DD">
                         <rect key="frame" x="279" y="29.5" width="16" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHn-EN-XHh">
+                        <rect key="frame" x="352.5" y="28" width="12.5" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -53,8 +59,11 @@
                     <constraint firstItem="JIf-ez-8DD" firstAttribute="leading" secondItem="WqH-4m-ri7" secondAttribute="trailing" constant="40" id="XUX-9N-Iqw"/>
                     <constraint firstAttribute="bottom" secondItem="gwo-hb-bex" secondAttribute="bottom" constant="10" id="aOT-Nl-eVc"/>
                     <constraint firstItem="gwo-hb-bex" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="aU7-r0-guZ"/>
+                    <constraint firstAttribute="trailing" secondItem="lHn-EN-XHh" secondAttribute="trailing" constant="10" id="fDq-3O-aYS"/>
                     <constraint firstItem="JIf-ez-8DD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gEv-VD-wmv"/>
                     <constraint firstItem="QsO-k5-0BO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="gxq-Ae-Bny"/>
+                    <constraint firstItem="lHn-EN-XHh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="i9v-ak-9a0"/>
+                    <constraint firstItem="lHn-EN-XHh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="scZ-zA-MnK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
